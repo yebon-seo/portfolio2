@@ -1,0 +1,234 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+* {margin: 0;padding: 0;box-sizing: border-box;}
+ul,li {list-style: none;}
+a{text-decoration: none;}
+body {
+  font-family: "pretendard";
+}
+/*==========header==========*/
+header {
+  width: 100%;/*이거 조정해*/
+  height: 36px; /*이거 조정해*/
+  margin: 0 auto;
+  padding: 0 45px;/*이거 조정해*/
+  background-color: #f1f1f1;
+}
+header > .container {
+  max-width: 1280px;/*이거 조정해*/
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+header > .container > .icons {
+  display: flex;
+  gap: 24px;
+}
+header > .container > .icons img {
+  width: 36px;/*이거 조정해*/
+  height: 36px;/*이거 조정해*/
+  display: block;
+}
+header > .container > .tabs > ul {
+  display: flex;
+  align-content: center;
+  line-height: 36px;
+}
+header > .container > .tabs > ul > li > a{
+  color: #111;
+  font-size: 12px;
+  padding: 0 16px;
+  border-right: 1px solid #111;
+}
+header > .container > .tabs > ul > li:last-child a {
+  border-right: none;
+}
+
+/*==========nav==========*/
+nav {
+  width: 100%;/*이거 조정해*/
+  height: 60px; /*이거 조정해*/
+  margin: 0 auto;
+  padding: 0 45px;/*이거 조정해*/
+}
+nav > .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+/* nav > .container > .logo {
+  height: 60px;
+} */
+nav > .container > .logo img{
+  display: block;
+  width: 90px;
+  height: 60px;
+}
+nav > .container > .gnb > ul{
+  display: flex;
+  gap: 15px;
+  line-height: 60px;
+}
+nav > .container > .gnb > ul > li a {
+  color: #111;
+  font-weight: 700;
+}
+nav > .container > .mine {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+nav > .container > .mine > .search {
+  display: flex;
+  background-color: #f1f1f1;
+  width: 160px;
+  height: 36px;
+  align-items: center;
+  border-radius: 20px;
+}
+nav > .container > .mine > .search > img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  text-align: center;
+  margin-left: 9px;
+}
+nav > .container > .mine > .search > input {
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 36px;
+  margin: 0 9px;
+  background-color: transparent;
+}
+nav > .container > .mine > .search > input::placeholder{
+  font-size: 13px;
+  font-weight: 700;
+  color: #ccc;
+}
+nav > .container >.mine > .icons {
+  display: flex;
+  gap: 10px;
+}
+nav > .container > .mine > .icons > img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.w768px-icons {
+  display: none;
+}
+
+/*==========공지사항==========*/
+#notice {
+  width: 100%;/*이거 조정해*/
+  height: 58px; /*이거 조정해*/
+  margin: 0 auto;
+  padding: 0 45px;/*이거 조정해*/
+  background-color: #f1f1f1;
+}
+#notice > .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+#notice > .container > .txt {
+  text-align: center;
+  padding: 10px 0;
+}
+#notice > .container > .txt > p {
+  font-size: 16px;
+  color: #111;
+}
+#notice > .container > .txt > a b {
+  font-size: 12px;
+  color: #111;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/*==========메인배경==========*/
+main {
+  width: 100%;/*이거 조정해*/
+}
+main > .container {
+  width: 100%;
+}
+main > .container > img{
+  width: 100%;
+
+}
+
+/* 화면 크기가 1200px 이하일 때 */
+@media (max-width: 1200px) {
+  header {
+    padding: 0 40px;
+  }
+  /* .w768px-icons {
+    display: none;
+  } */
+  #notice {
+    padding: 0 40px;
+  }
+}
+
+/* 화면 크기가 768px 이하일 때 (모바일 화면) */
+@media (max-width: 768px) {
+  header {
+   display: none;
+  }
+  nav {
+    padding: 0 40px;
+  }
+  .logo {
+    width: 80px;
+    height: 50px;
+  }
+  nav .gnb ,
+  nav .mine{
+    display: none !important;
+  }
+  .w768px-icons {
+    display: flex !important;
+    gap: 20px;
+    height: 60px;
+    align-items: center;
+  }
+  .w768px-icons > a img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  #notice {
+    padding: 0 40px;
+  }
+ 
+
+}
+
+/* 화면 크기가 600px 이하일 때 (초소형 화면) */
+@media (max-width: 600px) {
+  header {
+    display: none;
+  }
+  nav {
+    padding: 0 20px;
+  }
+  nav .logo {
+    width: 80px;
+    height: 50px;
+  }
+  nav .gnb ,
+  nav .mine{
+    display: none;
+  }
+  .w768px-icons {
+    display: block;
+  }
+  #notice {
+    padding: 0 20px;
+  }
+}

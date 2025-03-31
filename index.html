@@ -5,85 +5,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>나이키 반응형 웹사이트</title>
+  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
   <!-- 헤더 -->
-  <header>
-    <div class="container">
-      <div class="icons">
-        <a href="#"><img src="images/jordan.png" alt=""></a>
-        <a href="#"><img src="images/converse.png" alt=""></a>
-      </div>
-
-      <div class="tabs">
-        <ul>
-          <li><a href="#">매장찾기</a></li>
-          <li><a href="#">고객센터</a></li>
-          <li><a href="#">가입하기</a></li>
-          <li><a href="#">로그인</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <!-- 헤더 끝 -->
-
-  <!-- NAV -->
-  <nav>
-    <div class="container">
-      <div class="logo">
-        <img src="images/nike_logo.png" alt="로고">
-      </div>
-      <div class="gnb">
-        <ul>
-          <li><a href="#">New</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Kids</a></li>
-          <li><a href="#">Jordan</a></li>
-          <li><a href="#">Sale</a></li>
-        </ul>
-      </div>
-      <div class="mine">
-        <div class="search">
-          <img src="images/search.png" alt="검색">
-          <input type="search" placeholder="검색">
-        </div>
+  <div class="cover">
+    <header>
+      <div class="container">
         <div class="icons">
-          <img src="images/heart.png" alt="">
-          <img src="images/shopping-bag.png" alt="">
+          <a href="#"><img src="images/jordan.png" alt=""></a>
+          <a href="#"><img src="images/converse.png" alt=""></a>
+        </div>
+
+        <div class="tabs">
+          <ul>
+            <li><a href="#">매장찾기</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">가입하기</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
         </div>
       </div>
-      <div class="w768px-icons">
-        <a href="#"><img src="images/search2.png" alt=""></a>
-        <a href="#"><img src="images/user.png" alt=""></a>
-        <a href="#"><img src="images/shopping-cart.png" alt=""></a>
-        <a href="#"><img src="images/menu.png" alt=""></a>
+    </header>
+    <!-- 헤더 끝 -->
+
+    <!-- NAV -->
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <img src="images/nike_logo.png">
+        </div>
+        <div class="gnb">
+          <ul>
+            <button class="close-btn">✖</button> <!-- X 버튼 추가 -->
+            <li><a href="#">New</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Jordan</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+        <div class="mine">
+          <div class="search">
+            <img src="images/search.png" alt="검색">
+            <input type="search" placeholder="검색">
+          </div>
+          <div class="icons">
+            <img src="images/heart.png" alt="">
+            <img src="images/shopping-bag.png" alt="">
+          </div>
+        </div>
+        <div class="w768px-icons">
+          <a href="#"><img src="images/search2.png" alt=""></a>
+          <a href="#"><img src="images/user.png" alt=""></a>
+          <a href="#"><img src="images/shopping-cart.png" alt=""></a>
+          <a href="#" class="togglebtn"><img src="images/menu.png" alt=""></a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV 끝-->
+
+    <!-- 공지사항 -->
+    <div id="notice">
+      <div class="container">
+        <div class="txt">
+          <p>대학생 할인 프로그램</p>
+          <a href="#"><b>자세히보기</b></a>
+        </div>
       </div>
     </div>
-  </nav>
-  <!-- NAV 끝-->
+    <!-- 공지사항 끝 -->
 
-  <!-- 공지사항 -->
-<div id="notice">
-  <div class="container">
-    <div class="txt">
-      <p>대학생 할인 프로그램</p>
-      <a href="#"><b>자세히보기</b></a>
-    </div>
-  </div>
-</div>
-  <!-- 공지사항 끝 -->
+    <!-- 메인 -->
+    <main>
+      <picture class="container">
+        <source srcset="images/main-img(w600).png" media="(max-width: 600px)">
+        <img src="images/main-img.png" alt="">
+      </picture>
+    </main>
+    <!-- 메인 끝 -->
 
-  <!-- 메인 -->
-<main>
-  <div class="container">
-    <img src="images/main-img.png" alt="">
+    <!-- 신제품 DN-8 -->
+     <div id="new-item">
+      <div class="container">
+        <div class="txt">
+          <p>신제품</p>
+          <h2>에어맥스 DN8</h2>
+          <p>새로워진 다이내믹 에어로 경이로운 감각을 경험 해보세요.</p>
+        </div>
+        <div class="btn">
+          <a href="#">Dn8 구매하기</a>
+          <a href="#">자세히 보기</a>
+        </div>
+      </div>
+     </div>
+    <!-- 신제품 DN-8 끝  -->
+
+    <!-- After Dark Tour -->
+     <div id="running">
+      <div class="container">
+        <div class="txt">
+          <h2>After Dark Tour</h2>
+          <p>레이스 참가자는 물론, 모든 러너를 위해</p>
+        </div>
+        <div class="btn">
+          <a class="lbtn"><i class="fas fa-chevron-left"></i></a>
+          <a class="rbtn"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <article>
+          <div class="card-wrap">
+            <div class="card">
+              <img src="images/running1.png" alt="러닝">
+              <h2>AFTER DARK TOUR 트레이닝</h2>
+              <p>나이키와 함께 레이스를 준비해 보세요. 
+                트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+              <button type="button">자세히보기</button>
+            </div>
+            <div class="card">
+              <img src="images/running2.png" alt="러닝">
+              <h2>AFTER DARK TOUR 트레이닝</h2>
+              <p>나이키와 함께 레이스를 준비해 보세요. 
+                트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+              <button type="button">자세히보기</button>
+            </div>
+            <div class="card">
+              <img src="images/running3.png" alt="러닝">
+              <h2>AFTER DARK TOUR 트레이닝</h2>
+              <p>나이키와 함께 레이스를 준비해 보세요. 
+                트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+              <button type="button">자세히보기</button>
+            </div>
+            <div class="card">
+              <img src="images/running4.png" alt="러닝">
+              <h2>AFTER DARK TOUR 트레이닝</h2>
+              <p>나이키와 함께 레이스를 준비해 보세요. 
+                트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+              <button type="button">자세히보기</button>
+            </div>
+            <div class="card">
+              <img src="images/running5.png" alt="러닝">
+              <h2>AFTER DARK TOUR 트레이닝</h2>
+              <p>나이키와 함께 레이스를 준비해 보세요. 
+                트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+              <button type="button">자세히보기</button>
+            </div>
+          </div>
+        </article>
+      </div>
+     </div>
   </div>
-</main>
-  <!-- 메인 끝 -->
-   
+
+
+  <script>
+    /*작은화면 메뉴 토글버튼*/
+    const toggleBtn = document.querySelector(".togglebtn");
+    const gnb = document.querySelector(".gnb > ul");
+    const closeBtn = document.querySelector(".close-btn")
+
+    toggleBtn.addEventListener("click", () => {
+      gnb.style.right = 0
+    })
+    closeBtn.addEventListener("click", () => {
+      gnb.style.right = "-100%"
+    })
+  </script>
 </body>
 
 </html>

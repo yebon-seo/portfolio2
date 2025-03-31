@@ -50,6 +50,8 @@ nav {
   height: 60px; /*이거 조정해*/
   margin: 0 auto;
   padding: 0 45px;/*이거 조정해*/
+  position: relative;
+  z-index: 2;
 }
 nav > .container {
   max-width: 1280px;
@@ -59,22 +61,29 @@ nav > .container {
   justify-content: space-between;
   align-content: center;
 }
-/* nav > .container > .logo {
-  height: 60px;
-} */
+nav > .container > .logo {
+  width: 251px;
+}
 nav > .container > .logo img{
   display: block;
   width: 90px;
   height: 60px;
 }
+
 nav > .container > .gnb > ul{
   display: flex;
   gap: 15px;
   line-height: 60px;
+
+}
+/*닫기버튼 입니다*/
+nav > .container > .gnb > ul > .close-btn {
+  display: none;
 }
 nav > .container > .gnb > ul > li a {
   color: #111;
   font-weight: 700;
+  text-align: center;
 }
 nav > .container > .mine {
   display: flex;
@@ -159,40 +168,168 @@ main > .container {
 }
 main > .container > img{
   width: 100%;
-
 }
+
+/*==========신제품==========*/
+#new-item {
+  width: 100%;
+  margin: auto;
+  padding: 0 45px;
+}
+#new-item > .container {
+  max-width: 1280px;
+  width: 100%;
+}
+#new-item > .container > .txt {
+  text-align: center;
+  margin-top: 50px;
+}
+#new-item > .container > .txt:first-child p {
+  font-weight: 500;
+}
+#new-item > .container > .txt > p {
+  display: block;
+  font-size: 16px;
+  color: #111;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+#new-item > .container > .txt > h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+/*버튼*/
+#new-item > .container > .btn {
+  display: flex;
+  gap: 44px;
+  justify-content: center;
+}
+#new-item > .container > .btn > a {
+  width: 150px;
+  line-height: 50px;
+  background-color: #111;
+  border-radius: 30px;
+  text-align: center;
+  color: #f1f1f1;
+  font-weight: 500;
+  transition: 0.3s;
+}
+#new-item > .container > .btn > a:hover {
+  background-color: #be0f0f;
+}
+
+/*==========After Dark Tour==========*/
+#running {
+  width: 100%;
+  padding: 0 45px;
+  margin: auto;
+  margin-top: 120px;
+}
+#running > .container {
+  max-width: 1280px;
+  width: 100%;
+  overflow: hidden;
+}
+#running > .container > .txt > h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+}
+#running > .container > .txt > p {
+  margin-top: 6px;
+}
+#running > .container > .btn {
+  display: flex;
+  justify-content: right;
+  gap: 35px;
+  margin-bottom: 10px;
+}
+#running > .container > .btn > a {
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+#running > .container > .btn > a > i {
+  line-height: 50px;
+  color: #111;
+}
+
+#running > .container > .btn > a:hover {
+  background-color: #ccc;
+}
+
+.card-wrap {
+  width: 2400px;
+  display: flex;
+}
+.card-wrap > .card > img{
+  width: 41.66%
+}
+
 
 /* 화면 크기가 1200px 이하일 때 */
 @media (max-width: 1200px) {
   header {
     padding: 0 40px;
   }
-  /* .w768px-icons {
-    display: none;
-  } */
   #notice {
+    padding: 0 40px;
+  }
+  #new-item {
     padding: 0 40px;
   }
 }
 
 /* 화면 크기가 768px 이하일 때 (모바일 화면) */
-@media (max-width: 768px) {
+@media (max-width: 995px) {
   header {
    display: none;
   }
-  nav {
+  nav,
+  #notice,
+  #new-item {
     padding: 0 40px;
   }
   .logo {
     width: 80px;
     height: 50px;
   }
-  nav .gnb ,
-  nav .mine{
-    display: none !important;
+  nav > .container > .gnb {
+    width: 100%;
+    text-align: center;
   }
-  .w768px-icons {
-    display: flex !important;
+  nav > .container > .gnb > ul {
+    flex-direction: column;
+    position: fixed;
+    background-color: #f1f1f1;
+    width: 100%;
+    right: -100%; top:0;
+    transition: 0.5s;
+  }nav > .container > .gnb > ul > li:hover {
+    background-color: #ccc;
+  }
+  /*닫기버튼 입니다*/
+  nav > .container > .gnb > ul > .close-btn {
+    display: block;
+    position: absolute;
+    left: 10px; top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+  }
+  nav > .container > .mine{
+    display: none;
+  }
+  .container > .w768px-icons {
+    display: flex;
     gap: 20px;
     height: 60px;
     align-items: center;
@@ -202,10 +339,12 @@ main > .container > img{
     height: 30px;
     display: block;
   }
-  #notice {
-    padding: 0 40px;
+  #new-item > .container > .txt {
+    margin-top: 30px;
   }
- 
+  #new-item > .container > .txt > h2 {
+    font-size: 40px;
+  }
 
 }
 
@@ -214,21 +353,19 @@ main > .container > img{
   header {
     display: none;
   }
-  nav {
-    padding: 0 20px;
-  }
+  nav,
+  #notice,
+  #new-item
+   { padding: 0 20px; }
   nav .logo {
     width: 80px;
     height: 50px;
   }
-  nav .gnb ,
   nav .mine{
     display: none;
   }
   .w768px-icons {
     display: block;
   }
-  #notice {
-    padding: 0 20px;
-  }
+
 }

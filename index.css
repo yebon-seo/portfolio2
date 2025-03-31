@@ -76,6 +76,7 @@ nav > .container > .gnb > ul{
   line-height: 60px;
 
 }
+
 /*닫기버튼 입니다*/
 nav > .container > .gnb > ul > .close-btn {
   display: none;
@@ -331,13 +332,14 @@ main > .container > img{
   }
   .card-wrap {
     max-width: 1200px;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
   }
   .card-wrap > .card {
-    width: 38.3333%;
-    padding-right: 1.6666%;
+    width: 50%;
+    padding: 0 0.8333%; /*양쪽으로 주려고*/
     margin-top: 50px;
   }
   .card-wrap > .card > img {
@@ -361,14 +363,15 @@ main > .container > img{
     height: 50px;
   }
   nav > .container > .gnb {
-    width: 100%;
+    width: 50%;
     text-align: center;
   }
   nav > .container > .gnb > ul {
     flex-direction: column;
     position: fixed;
     background-color: #f1f1f1;
-    width: 100%;
+    width: 50%;
+    height: 100vh;
     right: -100%; top:0;
     transition: 0.5s;
   }nav > .container > .gnb > ul > li:hover {
@@ -378,7 +381,7 @@ main > .container > img{
   nav > .container > .gnb > ul > .close-btn {
     display: block;
     position: absolute;
-    left: 10px; top: 10px;
+    right: 10px; top: 15px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -414,7 +417,7 @@ main > .container > img{
   .card-wrap > .card {
     width: 50%;
     margin-top: 50px;
-    padding: 2.010%;
+    padding: 0 1.005%;
   }
   .card-wrap > .card > img {
     width: 100%;
@@ -429,7 +432,8 @@ main > .container > img{
   }
   nav,
   #notice,
-  #new-item
+  #new-item,
+  #running
    { padding: 0 20px; }
   nav .logo {
     width: 80px;
@@ -446,6 +450,22 @@ main > .container > img{
   }
   #running > .container > div > .w1200px-txt > p {
     margin-top: 10px;
+  }
+  .card-wrap {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
+  .card-wrap > .card {
+    width: calc(100% / 1.5); /* 1.5개씩 배치되도록 계산 */
+    margin-top: 50px;
+    padding: 0 1.666%;
+    flex-shrink: 0; /* 카드가 축소되지 않도록 설정 */
+  }
+  .card-wrap > .card > img {
+    width: 100%;
   }
 
 }

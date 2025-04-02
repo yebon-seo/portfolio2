@@ -39,7 +39,6 @@
         </div>
         <div class="gnb">
           <ul>
-            <button class="close-btn">✖</button> <!-- X 버튼 추가 -->
             <li><a href="#">New</a></li>
             <li><a href="#">Men</a></li>
             <li><a href="#">Women</a></li>
@@ -47,9 +46,29 @@
             <li><a href="#">Jordan</a></li>
             <li><a href="#">Sale</a></li>
           </ul>
-
-          
         </div>
+        <!-- 작아지면 보일 서브메뉴창 -->
+        <div class="s-gnb">
+          <button class="close-btn">✖</button> <!-- X 버튼 추가 -->
+          <ul>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Jordan</a></li>
+            <li><a href="#">Sale</a></li>
+            <li class="icons">
+              <a href="#"><img src="images/jordan.png" alt=""></a>
+              <a href="#"><img src="images/converse.png" alt=""></a>
+            </li>
+            <li>
+              <p>나이키 멤버가 되어 최고의 제품, 스포츠에 대한 영감과 스토리를 만나보세요.
+                <a href="#">자세히보기 -> </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+
         <div class="mine">
           <div class="search">
             <img src="images/search.png" alt="검색">
@@ -77,6 +96,10 @@
           <p>대학생 할인 프로그램</p>
           <a href="#"><b>자세히보기</b></a>
         </div>
+        <!-- <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider"></span>
+        </label> -->
       </div>
     </div>
     <!-- 공지사항 끝 -->
@@ -157,7 +180,7 @@
               </div>
               <button type="button">자세히보기</button>
             </div>
-            <div class="card">
+            <div class="card none">
               <img src="images/running5.png" alt="러닝">
               <div>
                 <h2>함께 달리는 10주 : 1주차 미션</h2>
@@ -167,41 +190,60 @@
             </div>
           </div>
         </article>
-      </div>    
+      </div>
     </div>
-      <!-- After Dark Tour end -->
+    <!-- After Dark Tour end -->
 
-      <!-- 배너 동영상 -->
-      <figure>
-        <!-- <div class="container"> -->
-          <video src="images/video.mp4" muted loop autoplay></video>
-          <div class="top0">
-          <p>AIRMAX Dn8</p>
+    <!-- 배너 동영상 -->
+    <figure>
+      <video src="images/video.mp4" muted loop autoplay></video>
+      <!-- 배너 동영상 txt -->
+      <div id="txt">
+        <div class="top0">
+          <p>AIRMAX <span>Dn8</span></p>
         </div>
         <div class="center">
           <h2>Infinite <br> Space</h2>
-          
+          <p>powered by</p><span>8</span>
         </div>
-        <!-- </div> -->
-      </figure>
-    <!-- 배너 동영상 end -->
+      </div>
+    </figure>
+    <!-- 배너 동영상 txt end -->
 
-  </div>
+    <div id="qr">
+      <div class="txt">
+        <h2>Infinite Space</h2>
+        <p>에어맥스 Dn8처럼 무한한 가능성을 가진 인피니트 스페이스로 초대합니다.<br>
+          가장 먼 곳까지 도달한 탐험 기록을 인증하면 88% 쿠폰 혜택과 The suite 디너 코스 초대권을 드립니다.</p>
+      </div>
+      <div class="w600-txt">
+        <h2>Infinite Space</h2>
+        <p>에어맥스 Dn8처럼 무한한 가능성을 가진 인피니트 스페이스로 초대합니다.</p>
+        <p>가장 먼 곳까지 도달한 탐험 기록을 인증하면 88% 쿠폰 혜택에 도전해보세요.</p>
+      </div>
+      <div class="qr-code">
+        <img src="images/qr.jpg" alt="qr">
+        <a href="#"><p>QR 스캔하여 입장</p></a>
+      </div>
+    </div>
+    <!-- 배너 동영상 QR end -->
 
 
-  <script>
-    /*작은화면 메뉴 토글버튼*/
-    const toggleBtn = document.querySelector(".togglebtn");
-    const gnb = document.querySelector(".gnb > ul");
-    const closeBtn = document.querySelector(".close-btn")
+    <script>
+      /*작은화면 메뉴 토글버튼*/
+      const toggleBtn = document.querySelector(".togglebtn");
+      const gnb = document.querySelector(".s-gnb");
+      const closeBtn = document.querySelector(".close-btn")
 
-    toggleBtn.addEventListener("click", () => {
-      gnb.style.right = 0
-    })
-    closeBtn.addEventListener("click", () => {
-      gnb.style.right = "-100%"
-    })
-  </script>
+      toggleBtn.addEventListener("click", () => {
+        gnb.style.right = 0
+      })
+      closeBtn.addEventListener("click", () => {
+        gnb.style.right = "-100%"
+      })
+
+    
+    </script>
 </body>
 
 </html>

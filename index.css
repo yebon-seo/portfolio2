@@ -8,10 +8,14 @@ body {
   font-family: "pretendard";
 }
 /* 다크 모드 활성화 시 스타일 */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-  z-index: 99999;
+.dark-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+  z-index: 5; /* 메뉴보다 아래 */
 }
 /*==========header==========*/
 header {
@@ -90,27 +94,27 @@ nav > .container > .gnb > ul > li a {
 }
 /*창이 작아지면 보일 메뉴창*/
 nav > .container > .s-gnb {
-  display: block;
+  display: none;
   background-color: #f1f1f1;
+  z-index: 3;
+  position: absolute;
+  width: 40%;
+  height: 100vh;
 }
 nav > .container > .s-gnb > ul {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100%; */
 }
 nav > .container > .s-gnb > ul > li {
-  padding: 0 20px;
   line-height: 60px;
-}
-nav > .container > .s-gnb > ul > li:hover {
-  background-color: #ccc;
-}
-nav > .container > .s-gnb > ul > li:nth-of-type(5):hover {
-  background-color: transparent;
+  padding: 0 20px;
 }
 nav > .container > .s-gnb > ul > .icons {
   text-align: center;
   line-height: 60px;
+  display: flex;
+  justify-content: space-around;
 }
 nav > .container > .s-gnb > ul > .icons > a > img {
   width: 50px;
@@ -119,17 +123,37 @@ nav > .container > .s-gnb > ul > .icons > a > img {
 nav > .container > .s-gnb > ul > li > a {
   color: #111;
 }
+nav > .container > .s-gnb > ul > li:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+nav > .container > .s-gnb > ul > li.icons:hover,
+nav > .container > .s-gnb > ul > li:last-child:hover {
+  background-color: transparent; /* 특정 li hover 제거 */
+}
 nav > .container > .s-gnb > ul > li > p {
   line-height: 1.5;
   font-size: 20px;
   font-weight: bold;
   color: #666;
+  margin-top: 30px;
 }
 nav > .container > .s-gnb > ul > li > p > a {
   color: #111;
   display: block;
   margin-top: 10px;
   font-size: 14px;
+}
+  /*닫기버튼 입니다*/
+nav > .container > .s-gnb > .close-btn {
+  /* display: block; */
+  position: absolute;
+  right: 10px; top: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
 }
 nav > .container > .mine {
   display: flex;
@@ -173,7 +197,7 @@ nav > .container > .mine > .icons > img {
   height: 30px;
   display: block;
 }
-.w768px-icons {
+.w995px-icons {
   display: none;
 }
 
@@ -426,7 +450,7 @@ figure > video {
 }
 #txt > .center > h2 {
   color: #f1f1f1;
-  font-size: 120px;
+  font-size: 90px;
   line-height: 0.8;
   text-align: center;
 }
@@ -449,6 +473,9 @@ figure > video {
 }
 
 /*Infinite Space 텍스트 부분*/
+#qr {
+  padding: 0 40px;
+}
 #qr > .txt {
   margin-top: 30px;
   text-align: center;
@@ -485,6 +512,19 @@ figure > video {
   color: #111;
   font-size: 20px;
   text-decoration: underline;
+}
+#qr > .pic {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  /* height: 50vh; */
+}
+#qr > .pic > img {
+  width: 46.0937%;
+  display: block;
+  object-fit: cover;
 }
 
 
@@ -541,11 +581,13 @@ figure > video {
     height: 50px;
   }
   nav > .container > .gnb {
+    display: none;
     width: 50%;
-    text-align: center;
+    /* text-align: center; */
   }
-  nav > .container > .gnb > ul {
-    flex-direction: column;
+  /*서브메뉴*/
+  nav > .container > .s-gnb  {
+    display: block;
     position: fixed;
     background-color: #f1f1f1;
     width: 50%;
@@ -553,34 +595,17 @@ figure > video {
     right: -100%; top:0;
     transition: 0.5s;
   }
-  nav > .container > .gnb > ul > li:hover {
-    background-color: #ccc;
-  }
-  /*닫기버튼 입니다*/
-  /* nav > .container > .s-gnb > .close-btn {
-    display: block;
-    position: absolute;
-    right: 10px; top: 15px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 20px;
-    background-color: transparent;
-  } */
-  /*서브메뉴*/
-  nav > .container > .s-gnb {
-    display: none;
-  }
+
   nav > .container > .mine{
     display: none;
   }
-  .container > .w768px-icons {
+  .container > .w995px-icons {
     display: flex;
     gap: 20px;
     height: 60px;
     align-items: center;
   }
-  .w768px-icons > a img {
+  .w995px-icons > a img {
     width: 30px;
     height: 30px;
     display: block;
@@ -624,6 +649,10 @@ figure > video {
   #qr > .qr-code > img {
     margin-bottom: 32px;
   }
+  /*이미지 4장*/
+  #qr > .pic {
+    gap : 13px;
+  }
 
 }
 
@@ -644,7 +673,7 @@ figure > video {
   nav .mine{
     display: none;
   }
-  .w768px-icons {
+  .w995px-icons {
     display: block;
   }
   #running > .container > div {
@@ -693,7 +722,7 @@ figure > video {
   }
   /*Infinite Space 텍스트 부분*/
   #qr {
-    padding: 0;
+    padding: 0 20px;
   }
   #qr > .txt {
     display: none;
@@ -717,6 +746,13 @@ figure > video {
   }
   #qr > .qr-code {
     display: none;
+  }
+   /*이미지 4장*/
+   #qr > .pic {
+    gap : 20px;
+  }
+  #qr > .pic > img {
+    width: 100%;
   }
 
 }

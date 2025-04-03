@@ -586,6 +586,7 @@ figure > video {
   font-size: 24px;
   color: #111;
   font-weight: 600;
+  line-height: 60px;
 }
 /*버튼*/
 #trending-now > .container > div > .btn {
@@ -622,12 +623,14 @@ figure > video {
 
 /*이미지 wrap*/
 #trending-now > .container > .img-wrap {
-  width: 2000px;
+  max-width: 2000px;
+  width: 100%;
   display: flex;
   gap: 20px;
 }
 #trending-now > .container > .img-wrap > .img-box {
   width: 24.1969%;
+  /* min-width: 360px; */
   position: relative;
 }
 
@@ -644,7 +647,10 @@ figure > video {
 
 #trending-now > .container > .img-wrap > .img-box > img {
   width: 100%;
+  /* max-width: 360px; */
+  max-height: 600px;
   display: block;
+  object-fit: cover;
 }
 #trending-now > .container > .img-wrap > .img-box > .txt {
   position: absolute;
@@ -656,8 +662,7 @@ figure > video {
   font-size: 30px;
   font-weight: 600;
   color: #f1f1f1;
-  line-height: 60px;
-  /* margin-bottom: 40px; */
+  margin-bottom: 40px;
 }
 #trending-now > .container > .img-wrap > .img-box > .txt > a {
   width: 100px;
@@ -705,6 +710,50 @@ figure > video {
     display: none;
   }
 
+
+  /*Trending Now*/
+  #trending-now > .container > .img-wrap {
+    width: 100%;
+    /* max-width: 1200px; */
+    display: flex;
+    /* flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between; */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  #trending-now > .container > .img-wrap > .img-box {
+    width: calc(50% - 10px); /* gap의 절반만큼 줄이기 ★★★★★이거물어봐★★*/
+  }
+  #trending-now > .container > .img-wrap > .img-box > img {
+    width: 100%;
+  }
+  /*버튼*/
+  #trending-now > .container > div > .btn {
+    display: none;
+  }
+  #trending-now > .container > div > .morebtn {
+    display: block;
+    line-height: 60px;
+  }
+  #trending-now > .container > .img-wrap > .img-box > .txt {
+    position: static;
+    margin-top: 20px;
+  }
+  #trending-now > .container > .img-wrap > .img-box > .txt > h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+  }
+  #trending-now > .container > .img-wrap > .img-box > .txt > a {
+    background-color: #111;
+    color: #f1f1f1;
+  }
+  /*가상요소*/
+  #trending-now > .container > .img-wrap > .img-box::after {
+    display: none;
+  }
 }
 
 /* 화면 크기가 995px 이하일 때 (모바일 화면) */
@@ -927,6 +976,46 @@ figure > video {
     font-size: 14px;
     width: 100px;
     line-height: 40px;
+  }
+
+  /*Trending Now*/
+  /* #trending-now > .container > .img-wrap { */
+    /* max-width: 2500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; 몰라 여기도 물어보까?*/
+  }
+  #trending-now > .container > .img-wrap > .img-box {
+    width: 80%; /* gap의 절반만큼 줄이기 ★★★★★이거물어봐★★*/
+  }
+  #trending-now > .container > .img-wrap > .img-box > img {
+    width: 100%;
+  }
+  /*버튼*/
+  #trending-now > .container > div > .btn {
+    display: flex;
+  }
+  #trending-now > .container > div > .morebtn {
+    display: none;
+  }
+  #trending-now > .container > .img-wrap > .img-box > .txt {
+    position: static;
+    margin-top: 20px;
+  }
+  #trending-now > .container > .img-wrap > .img-box > .txt > h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+  }
+  #trending-now > .container > .img-wrap > .img-box > .txt > a {
+    background-color: #111;
+    color: #f1f1f1;
+  }
+  /*가상요소*/
+  #trending-now > .container > .img-wrap > .img-box::after {
+    display: none;
   }
 
 }

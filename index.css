@@ -577,25 +577,25 @@ figure > video {
   overflow: hidden;
   overflow-x: auto;
 }
-#trending-now > .container > div {
+#trending-now > .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#trending-now > .container > div > h2 {
+#trending-now > div > h2 {
   font-size: 24px;
   color: #111;
   font-weight: 600;
   line-height: 60px;
 }
 /*버튼*/
-#trending-now > .container > div > .btn {
+#trending-now > div > .btn {
   display: flex;
   justify-content: flex-end;
   gap: 35px;
   margin-bottom: 10px;
 }
-#trending-now > .container > div > .btn > a {
+#trending-now > div > .btn > a {
   border-radius: 50%;
   background-color: #f1f1f1;
   width: 50px;
@@ -603,20 +603,20 @@ figure > video {
   text-align: center;
   cursor: pointer;
 }
-#trending-now > .container > div > .btn > a > i {
+#trending-now > div > .btn > a > i {
   line-height: 50px;
   color: #111;
 }
 
-#trending-now > .container > div > .btn > a:hover {
+#trending-now > div > .btn > a:hover {
   background-color: #ccc;
 }
 
 /*더보기 버튼*/
-#trending-now > .container > div > .morebtn {
+#trending-now > div > .morebtn {
   display: none;
 }
-#trending-now > .container > div > .morebtn > a {
+#trending-now > div > .morebtn > a {
   color: #111;
   font-size: 16px;
 }
@@ -683,11 +683,12 @@ figure > video {
 }
 #always-lconic > .container {
   width: 100%;
+  padding: 0 40px;
 }
 #always-lconic > .container > .title {
   width: 100%;
   margin: auto;
-  padding: 0 45px;
+  /* padding: 0 45px; */
 }
 #always-lconic > .container > .title > h2 {
   font-size: 24px;
@@ -732,6 +733,217 @@ figure > video {
   opacity: 1;
 } 
 
+/*나이키 멤버십*/
+#membership {
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 45px;
+  margin: auto;
+  margin-top: 120px;
+}
+#membership > .container {
+  width: 100%;
+  overflow-x: auto;
+}
+#membership > .title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  margin-bottom: 10px; /*글자와 컨텐츠 간격*/
+}
+#membership > .title > h2 {
+  color: #111;
+  font-size: 24px;
+  font-weight: 600;
+}
+/*버튼*/
+#membership > .title > .btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+#membership > .title > .btn > a {
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+#membership > .title > .btn > a > i {
+  line-height: 50px;
+  text-align: center;
+  color: #111;
+}
+/*마우스 호버시 이벤트*/
+#membership > .title > .btn > a:hover {
+  background-color: #ccc;
+}
+/*더보기 버튼*/
+#membership > .title > .morebtn {
+  display: none;
+}
+#membership > .title > .morebtn > a {
+  color: #111;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+/*컨텐츠*/
+#membership > .container > .img-wrap {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 120px;
+}
+#membership > .container > .img-wrap > .img-box {
+  width: 100%;
+}
+#membership > .container > .img-wrap > .img-box > img {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#membership > .container > .img-wrap > .img-box > h4 {
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#membership > .container > .img-wrap > .img-box > p {
+  color: #111;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#membership > .container > .img-wrap > .img-box > a {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  color: #f1f1f1;
+  width: 120px;
+  line-height: 40px;
+  background-color: #111;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/*작은사이즈 컨텐츠*/
+#membership > .container > .small-img-wrap {
+  width: 100%;
+  display: none;
+  margin-bottom: 80px;
+}
+#membership > .container > .small-img-wrap > .img-box {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#membership > .container > .small-img-wrap > .img-box > img {
+  display: block;
+  object-fit: cover;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#membership > .container > .small-img-wrap > .img-box > p {
+  color: #111;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#membership > .container > .small-img-wrap > .img-box > a {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  height:20px;
+  align-items: center;
+
+}
+#membership > .container > .small-img-wrap > .img-box > a > img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+/* bottom nav */
+#bottom-nav {
+  max-width: 1920px;
+  padding: 0 45px;
+  margin: auto;
+  border-top: 1px solid #ccc;
+}
+#bottom-nav > .container {
+  margin: 50px auto;
+}
+#bottom-nav > .container > .nav {
+  display: flex;
+  justify-content: space-around;
+}
+#bottom-nav > .container > .nav > li{
+  width: 100%;
+}
+#bottom-nav > .container > .nav > li > a {
+  display: flex;
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* #bottom-nav > .container > .nav > li:hover {
+  background-color: #f1f1f1;
+} */
+#bottom-nav > .container > .nav > li > .sub {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#bottom-nav > .container > .nav > li > .sub > li {
+  width: 100%;
+}
+#bottom-nav > .container > .nav > li > .sub > li > a {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+#bottom-nav > .container > .nav > li > .sub > li > a:hover {
+  color: #111;
+}
+
+#bottom-nav > .container > .copyright {
+  width: 100%;
+}
+
+#bottom-nav > .container > .copyright > ul {
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  justify-content: center;
+}
+#bottom-nav > .container > .copyright > ul > li{
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* bottom nav end*/
+
+
+/* bottom nav*/
+#bottom {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 100%;
+}
+#bottom > .container {
+  width: 100%;
+}
+#bottom > .container > .txt {
+  color: #333;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.5;
+}
+/* bottom nav end*/
 
 
 
@@ -752,14 +964,20 @@ figure > video {
       width: 100%;
       max-height: none;
     }
+    #trending-now > .container > .img-wrap > .img-box > .txt {
+      padding: 0;
+    }
   
     /*버튼*/
-    #trending-now > .container > div > .btn {
+    #trending-now > div > .btn {
       display: none;
     }
-    #trending-now > .container > div > .morebtn {
-      display: block;
+    #trending-now > .title {
       line-height: 60px;
+      margin-bottom: 60px;
+    }
+    #trending-now > div > .morebtn {
+      display: block;
     }
     #trending-now > .container > .img-wrap > .img-box > .txt {
       position: static;
@@ -779,7 +997,19 @@ figure > video {
     #trending-now > .container > .img-wrap > .img-box::after {
       display: none;
     }
+
+    /*always-lconic*/
+    #always-lconic > .container > .title {
+      margin-bottom: 60px;
+    }
+    /*나이키 멤버십*/
+    #membership > .title {
+      margin-bottom: 60px;
+
+    }
 }
+
+
 /* 화면 크기가 1200px 이하일 때 */
 @media (max-width: 1200px) {
   header,
@@ -813,6 +1043,57 @@ figure > video {
   /*마지막 카드 사라지기*/
   .card-wrap > .none {
     display: none;
+  }
+
+  /*나이키 멤버십*/
+  #membership > .container > .img-wrap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  #membership > .container > .img-wrap > .img-box {
+    width: calc(50% - 10px);
+  }
+  #membership > .title > .btn {
+    display: none;
+  }
+  #membership > .title > .morebtn {
+    display: block;
+  }
+
+  /* bottom nav */
+  #bottom-nav > .container > .nav {
+    flex-direction: column;
+  }
+  #bottom-nav > .container > .nav > li {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #eee;
+  }
+  #bottom-nav > .container > .nav > li > a {
+    line-height: 70px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0;
+  }
+  #bottom-nav > .container > .nav > li > .sub {
+    display: none;
+  }
+
+  /*copyright*/
+  #bottom-nav > .container > .copyright > ul {
+    flex-direction: column;
+    gap: 0;
+    line-height: 1.8;
+  }
+  /*bottom nav*/
+  #bottom {
+    padding: 20px 40px;
+  }
+  #bottom > .container > .txt {
+    text-align: left;
+    line-height: 1.5;
   }
 
 
@@ -885,7 +1166,15 @@ figure > video {
   .card-wrap > .card > img {
     width: 100%;
   }
+
+  /*==========After Dark Tour==========*/
+  #running {
+    margin-top: 80px;
+  }
   /*배너동영상*/
+  figure {
+    margin-top: 80px;
+  }
   figure > #txt > .center > h2 {
     font-size: 80px;
   }
@@ -915,8 +1204,33 @@ figure > video {
   #qr > .pic > div > .txt > h2 {
     font-size: 25px;
   }
- 
+
+  /*Trending Now*/
+  #trending-now {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  #trending-now > .title {
+    margin-bottom: 40px;
+  }
+  /*Always Iconic*/
+  #always-lconic > .container > .title {
+    margin-bottom: 40px;
+  }
+  /*나이키 멤버십*/
+  #membership {
+    margin-top: 80px;
+  }
+  #membership > .title {
+    margin-bottom: 40px;
+  }
+  /*컨텐츠*/
+  #membership > .container > .img-wrap {
+    display: flex;
+    gap: 50px 20px;
+  }
 }
+
 /*화면 크기가 885px 이하일 때*/
 @media (max-width: 885px) {
   #qr > .pic > div > .txt > h2 {
@@ -928,17 +1242,32 @@ figure > video {
     width: 80px;
     line-height: 35px;
   }
+
   #always-lconic > .container {
     padding-left: 40px;
   }
   #always-lconic > .container > .title {
     padding: 0;
   }
+
+  #trending-now > .container > .img-wrap > .img-box > .txt > h2 {
+    font-size: 20px;
+  }
   
 }
-
+/*화면 크기가 768px 이하일 때*/
+@media (max-width: 768px) {
+  /*나이키 멤버십*/
+  #membership > .container > .img-wrap {
+    flex-wrap: nowrap;
+    width: 400%;
+  }
+  #membership > .container > .img-wrap > .img-box {
+    width: 100%;
+  }
+}
 /* 화면 크기가 600px 이하일 때 (초소형 화면) */
-@media (max-width: 600px) {
+@media (max-width: 620px) {
   header {
     display: none;
   }
@@ -1051,6 +1380,7 @@ figure > video {
   /*Trending Now*/
   #trending-now {
     padding: 0 20px;
+    width: 100%;
   }
   #trending-now > .container > .img-wrap {
     width: 400%;
@@ -1066,10 +1396,10 @@ figure > video {
     width: 100%;
   }
   /*버튼*/
-  #trending-now > .container > div > .btn {
+  #trending-now > div > .btn {
     display: flex;
   }
-  #trending-now > .container > div > .morebtn {
+  #trending-now > div > .morebtn {
     display: none;
   }
   #trending-now > .container > .img-wrap > .img-box > .txt {
@@ -1094,6 +1424,25 @@ figure > video {
     padding-left: 20px;
   }
 
+  /*나이키 멤버십*/
+  #membership {
+    padding: 0 20px;
+  }
+  #membership > .container > .img-wrap {
+    display: none;
+  }
+  #membership > .container > .small-img-wrap {
+    display: block;
+  }
+
+  /*bottom nav*/
+  #bottom-nav {
+    padding: 0 20px;
+  }
+  /*bottom*/
+  #bottom {
+    padding: 20px;
+  }
 }
 @media (max-width: 504px) {
   /*배너동영상*/
@@ -1119,6 +1468,13 @@ figure > video {
   }
   #qr > .w600-txt > p:last-child {
     display: none;
+  }
+  /*버튼*/
+  #trending-now > div > .btn {
+    display: none;
+  }
+  #trending-now > div > .morebtn {
+    display: block;
   }
 
 }

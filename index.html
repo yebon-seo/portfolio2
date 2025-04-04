@@ -7,6 +7,8 @@
   <title>나이키 반응형 웹사이트</title>
   <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="index.css">
+  <!-- 스와이퍼 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -257,18 +259,18 @@
   <!-- 배너 동영상 QR end -->
 
   <!-- Trending Now -->
-   <div id="trending-now">
+  <div id="trending-now">
     <div class="container">
       <div>
-      <h2>Trending Now</h2>
-      <div class="btn">
-        <a class="lbtn"><i class="fas fa-chevron-left"></i></a>
-        <a class="rbtn"><i class="fas fa-chevron-right"></i></a>
+        <h2>Trending Now</h2>
+        <div class="btn">
+          <a class="lbtn"><i class="fas fa-chevron-left"></i></a>
+          <a class="rbtn"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="morebtn">
+          <a href="#">더보기 &gt;</a>
+        </div>
       </div>
-      <div class="morebtn">
-        <a href="#">더보기 &gt;</a>
-      </div>
-    </div>
       <div class="img-wrap">
         <div class="img-box">
           <img src="images/card-img1.png" alt="트렌딩">
@@ -300,31 +302,116 @@
         </div>
       </div>
     </div>
-   </div>
+  </div>
   <!-- Trending Now end-->
 
+  <!-- Always Iconic -->
+  <div id="always-lconic">
+    <div class="container">
+      <div class="title">
+        <h2>Always Iconic</h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/DUNK.png" alt="">
+            <p>덩크</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/cor.png" alt="">
+            <p>코르테즈</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/airforce.png" alt="">
+            <p>에어포스1</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/airmax.png" alt="">
+            <p>에어맥스</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/p-6000.png" alt="">
+            <p>P-6000</p>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/vomero.png" alt="">
+            <p>보메로</p>
+          </div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <!-- Always Iconic end-->
 
 
-  <script>
-    /*작은화면 메뉴 토글버튼*/
-    const toggleBtn = document.querySelector(".togglebtn");
-    const gnb = document.querySelector(".s-gnb");
-    const closeBtn = document.querySelector(".close-btn")
-    const body = document.querySelector("body")
 
-    // console.log(gnb)
-    toggleBtn.addEventListener("click", () => {
-      gnb.style.right = 0
-      body.classList.add("dark-mode")
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      /*작은화면 메뉴 토글버튼*/
+      const toggleBtn = document.querySelector(".togglebtn");
+      const gnb = document.querySelector(".s-gnb");
+      const closeBtn = document.querySelector(".close-btn")
+      const body = document.querySelector("body")
 
-    })
-    closeBtn.addEventListener("click", () => {
-      gnb.style.right = "-100%"
-      body.classList.remove("dark-mode")
-    })
+      // console.log(gnb)
+      toggleBtn.addEventListener("click", () => {
+        gnb.style.right = 0
+        body.classList.add("dark-mode")
+
+      })
+      closeBtn.addEventListener("click", () => {
+        gnb.style.right = "-100%"
+        body.classList.remove("dark-mode")
+      })
+
+      /*스와이퍼*/
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        // 반응형 설정
+        breakpoints: {
+          // 화면 너비가 1200px 이상일 때
+          1200: {
+            slidesPerView: 5,
+          },
+          // 화면 너비가 1024px 이상일 때
+          1024: {
+            slidesPerView: 4,
+          },
+          // 화면 너비가 768px 이상일 때
+          768: {
+            slidesPerView: 3.5,
+          },
+          // 화면 너비가 480px 이상일 때
+          480: {
+            slidesPerView: 1.5,
+          },
+          // 그보다 작을 때
+          0: {
+            slidesPerView: 1,
+          },
+        }
+      });
 
 
-  </script>
+    </script>
 </body>
 
 </html>

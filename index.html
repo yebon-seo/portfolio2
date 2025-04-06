@@ -8,7 +8,10 @@
   <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="index.css">
   <!-- 스와이퍼 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- 올라오는 애니메이션 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -142,7 +145,7 @@
         <a class="lbtn"><i class="fas fa-chevron-left"></i></a>
         <a class="rbtn"><i class="fas fa-chevron-right"></i></a>
       </div>
-      <article>
+      <article data-aos="fade-up" class="noneslide">
         <div class="card-wrap">
           <div class="card">
             <img src="images/running1.png" alt="러닝">
@@ -178,6 +181,52 @@
             <button type="button">자세히보기</button>
           </div>
           <div class="card none">
+            <img src="images/running5.png" alt="러닝">
+            <div>
+              <h2>함께 달리는 10주 : 1주차 미션</h2>
+              <p>레이스 목표 설정</p>
+            </div>
+            <button type="button">자세히보기</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="swiper1" data-aos="fade-up" >
+        <div class="swiper-wrapper card-wrap">
+          <div class="swiper-slide card">
+            <img src="images/running1.png" alt="러닝">
+            <div>
+              <h2>AFTER DARK TOUR 트레이닝</h2>
+              <p>나이키와 함께 레이스를 준비해 보세요.
+                트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+            </div>
+            <button type="button">자세히보기</button>
+          </div>
+          <div class="swiper-slide card">
+            <img src="images/running2.png" alt="러닝">
+            <div>
+              <h2>함께 달리는 10주 : 4주차 미션</h2>
+              <p>NRC 나이트 러닝 인증샷</p>
+            </div>
+            <button type="button">자세히보기</button>
+          </div>
+          <div class="swiper-slide card">
+            <img src="images/running3.png" alt="러닝">
+            <div>
+              <h2>함께 달리는 10주 : 3주차 미션</h2>
+              <p>페이스를 높이는 팁 퀴즈</p>
+            </div>
+            <button type="button">자세히보기</button>
+          </div>
+          <div class="swiper-slide card">
+            <img src="images/running4.png" alt="러닝">
+            <div>
+              <h2>함께 달리는 10주 : 2주차 미션</h2>
+              <p>러너를 위한 NTC 워크아웃 투표</p>
+            </div>
+            <button type="button">자세히보기</button>
+          </div>
+          <div class="swiper-slide card">
             <img src="images/running5.png" alt="러닝">
             <div>
               <h2>함께 달리는 10주 : 1주차 미션</h2>
@@ -224,7 +273,7 @@
         <p>QR 스캔하여 입장</p>
       </a>
     </div>
-    <div class="pic">
+    <div class="pic" data-aos="fade-up" >
       <div>
         <img src="images/Dn8.png" alt="신발">
         <div class="txt">
@@ -270,7 +319,7 @@
         <a href="#">더보기 &gt;</a>
       </div>
     </div>
-    <div class="container">
+    <div class="container"  data-aos="fade-up" >
       <div class="img-wrap">
         <div class="img-box">
           <img src="images/card-img1.png" alt="트렌딩">
@@ -344,138 +393,139 @@
         <div class="swiper-button-prev"></div>
       </div>
     </div>
-    <!-- Always Iconic end-->
+  </div>
+  <!-- Always Iconic end-->
 
 
-    <!-- 나이키 멤버십 -->
-    <div id="membership">
-      <div class="title">
-        <h2>나이키 멤버십</h2>
-        <div class="btn">
-          <a class="lbtn"><i class="fas fa-chevron-left"></i></a>
-          <a class="rbtn"><i class="fas fa-chevron-right"></i></a>
+  <!-- 나이키 멤버십 -->
+  <div id="membership">
+    <div class="title">
+      <h2>나이키 멤버십</h2>
+      <div class="btn">
+        <a class="lbtn"><i class="fas fa-chevron-left"></i></a>
+        <a class="rbtn"><i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="morebtn">
+        <a href="#">멤버 가입하기 &gt;</a>
+      </div>
+    </div>
+    <div class="container" data-aos="fade-up" >
+
+      <div class="img-wrap">
+        <div class="img-box">
+          <img src="images/membership1.png" alt="멤버십">
+          <h4>스포츠 & 웰니스 앱</h4>
+          <p>운동과 쇼핑을 위한 특별한 혜택</p>
+          <a href="#">자세히보기 </a>
         </div>
-        <div class="morebtn">
-          <a href="#">멤버 가입하기 &gt;</a>
+        <div class="img-box">
+          <img src="images/membership2.png" alt="멤버십">
+          <h4>멤버 리워드</h4>
+          <p>언제 어디서든 운동하기</p>
+          <a href="#">함께 운동하기</a>
+        </div>
+        <div class="img-box">
+          <img src="images/membership3.png" alt="멤버십">
+          <h4>SNKRS</h4>
+          <p>최고의 스니커즈 커뮤니티</p>
+          <a href="#">자세히보기 </a>
+        </div>
+        <div class="img-box">
+          <img src="images/membership4.png" alt="멤버십">
+          <h4>대학생 멤버 혜택</h4>
+          <p>대학생 할인 프로그램</p>
+          <a href="#">자세히보기 </a>
         </div>
       </div>
-      <div class="container">
 
-        <div class="img-wrap">
-          <div class="img-box">
-            <img src="images/membership1.png" alt="멤버십">
-            <h4>스포츠 & 웰니스 앱</h4>
-            <p>운동과 쇼핑을 위한 특별한 혜택</p>
-            <a href="#">자세히보기 </a>
-          </div>
-          <div class="img-box">
-            <img src="images/membership2.png" alt="멤버십">
-            <h4>멤버 리워드</h4>
-            <p>언제 어디서든 운동하기</p>
-            <a href="#">함께 운동하기</a>
-          </div>
-          <div class="img-box">
-            <img src="images/membership3.png" alt="멤버십">
-            <h4>SNKRS</h4>
-            <p>최고의 스니커즈 커뮤니티</p>
-            <a href="#">자세히보기 </a>
-          </div>
-          <div class="img-box">
-            <img src="images/membership4.png" alt="멤버십">
-            <h4>대학생 멤버 혜택</h4>
-            <p>대학생 할인 프로그램</p>
-            <a href="#">자세히보기 </a>
-          </div>
+      <div class="small-img-wrap">
+        <div class="img-box">
+          <img src="images/small4.png" alt="멤버십">
+          <p>운동과 쇼핑을 위한 특별한 혜택</p>
+          <a href="#"><img src="images/arrow-up-right.png" alt="">자세히보기 </a>
         </div>
-
-        <div class="small-img-wrap">
-          <div class="img-box">
-            <img src="images/small4.png" alt="멤버십">
-            <p>운동과 쇼핑을 위한 특별한 혜택</p>
-            <a href="#"><img src="images/arrow-up-right.png" alt="">자세히보기 </a>
-          </div>
-          <div class="img-box">
-            <img src="images/small3.png" alt="멤버십">
-            <p>언제 어디서든 운동하기</p>
-            <a href="#"><img src="images/arrow-up-right.png" alt="">함께 운동하기</a>
-          </div>
-          <div class="img-box">
-            <img src="images/small2.png" alt="멤버십">
-            <p>최고의 스니커즈 커뮤니티</p>
-            <a href="#"><img src="images/arrow-up-right.png" alt="">자세히보기 </a>
-          </div>
-          <div class="img-box">
-            <img src="images/small1.png" alt="멤버십">
-            <p>대학생 할인 프로그램</p>
-            <a href="#"><img src="images/arrow-up-right.png" alt="">자세히보기 </a>
-          </div>
+        <div class="img-box">
+          <img src="images/small3.png" alt="멤버십">
+          <p>언제 어디서든 운동하기</p>
+          <a href="#"><img src="images/arrow-up-right.png" alt="">함께 운동하기</a>
+        </div>
+        <div class="img-box">
+          <img src="images/small2.png" alt="멤버십">
+          <p>최고의 스니커즈 커뮤니티</p>
+          <a href="#"><img src="images/arrow-up-right.png" alt="">자세히보기 </a>
+        </div>
+        <div class="img-box">
+          <img src="images/small1.png" alt="멤버십">
+          <p>대학생 할인 프로그램</p>
+          <a href="#"><img src="images/arrow-up-right.png" alt="">자세히보기 </a>
         </div>
       </div>
     </div>
-    <!-- 나이키 멤버십 end -->
+  </div>
+  <!-- 나이키 멤버십 end -->
 
-    <!-- bottom nav -->
-    <div id="bottom-nav">
-      <div class="container">
-        <ul class="nav">
-          <li><a href="#">안내</a>
-            <ul class="sub">
-              <li><a href="#">멤버가입</a></li>
-              <li><a href="#">매장찾기</a></li>
-              <li><a href="#">나이키저널</a></li>
-            </ul>
-          </li>
-          <li><a href="#">멤버혜택</a>
-            <ul class="sub">
-              <li><a href="#">웰컴쿠폰</a></li>
-              <li><a href="#">생일쿠폰</a></li>
-              <li><a href="#">학생 할인 쿠폰</a></li>
-            </ul>
-          </li>
-          <li><a href="#">고객센터</a>
-            <ul class="sub">
-              <li><a href="#">주문배송조회</a></li>
-              <li><a href="#">반품정책</a></li>
-              <li><a href="#">결제방법</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">문의하기</a></li>
-            </ul>
-          </li>
-          <li><a href="#">회사소개</a>
-            <ul class="sub">
-              <li><a href="#">About Nike</a></li>
-              <li><a href="#">소식</a></li>
-              <li><a href="#">채용</a></li>
-              <li><a href="#">투자자</a></li>
-              <li><a href="#">지속가능성</a></li>
-              <li><a href="#">신고하기</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="copyright">
-          <ul>
-            <li>2025 Nike, Inc.All Rights Reserved</li>
-            <li>이용약관</li>
-            <li>개인정보처리방침</li>
-            <li>위치정보이용약관</li>
-            <li>영상정보처리기기 운영방침</li>
+  <!-- bottom nav -->
+  <div id="bottom-nav">
+    <div class="container">
+      <ul class="nav">
+        <li><a href="#">안내</a>
+          <ul class="sub">
+            <li><a href="#">멤버가입</a></li>
+            <li><a href="#">매장찾기</a></li>
+            <li><a href="#">나이키저널</a></li>
           </ul>
-        </div>
+        </li>
+        <li><a href="#">멤버혜택</a>
+          <ul class="sub">
+            <li><a href="#">웰컴쿠폰</a></li>
+            <li><a href="#">생일쿠폰</a></li>
+            <li><a href="#">학생 할인 쿠폰</a></li>
+          </ul>
+        </li>
+        <li><a href="#">고객센터</a>
+          <ul class="sub">
+            <li><a href="#">주문배송조회</a></li>
+            <li><a href="#">반품정책</a></li>
+            <li><a href="#">결제방법</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">문의하기</a></li>
+          </ul>
+        </li>
+        <li><a href="#">회사소개</a>
+          <ul class="sub">
+            <li><a href="#">About Nike</a></li>
+            <li><a href="#">소식</a></li>
+            <li><a href="#">채용</a></li>
+            <li><a href="#">투자자</a></li>
+            <li><a href="#">지속가능성</a></li>
+            <li><a href="#">신고하기</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="copyright">
+        <ul>
+          <li>2025 Nike, Inc.All Rights Reserved</li>
+          <li>이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>위치정보이용약관</li>
+          <li>영상정보처리기기 운영방침</li>
+        </ul>
       </div>
     </div>
-    <!-- bottom nav end -->
-    <div id="bottom">
-      <div class="container">
-        <div class="txt">
-          <p>(유)나이키코리아 대표 Kimberlee Lynn Chang Mendes, 킴벌리 린 창 멘데스 | 서울 강남구 테헤란로 152 강남파이낸스센터 30층 | 통신판매업신고번호
-            2011-서울강남-03461 | 등록번호 220-88-09068</p>
-          <p>고객센터 전화 문의 080-022-0182 FAX 02-6744-5880 | 이메일 service@nike.co.kr | 호스팅서비스사업자 (유)나이키코리아</p>
-          <p>현금 등으로 결제 시 안전 거래를 위해 나이키 쇼핑몰에서 가입하신 한국결제네트웍스 유한회사의 구매안전 서비스(결제대금예치)를 이용하실 수 있습니다.</p>
-          <p>콘텐츠산업진흥법에 의한 콘텐츠 보호 안내 <a href="#">자세히 보기</a></p>
-        </div>
+  </div>
+  <!-- bottom nav end -->
+  <div id="bottom">
+    <div class="container">
+      <div class="txt">
+        <p>(유)나이키코리아 대표 Kimberlee Lynn Chang Mendes, 킴벌리 린 창 멘데스 | 서울 강남구 테헤란로 152 강남파이낸스센터 30층 | 통신판매업신고번호
+          2011-서울강남-03461 | 등록번호 220-88-09068</p>
+        <p>고객센터 전화 문의 080-022-0182 FAX 02-6744-5880 | 이메일 service@nike.co.kr | 호스팅서비스사업자 (유)나이키코리아</p>
+        <p>현금 등으로 결제 시 안전 거래를 위해 나이키 쇼핑몰에서 가입하신 한국결제네트웍스 유한회사의 구매안전 서비스(결제대금예치)를 이용하실 수 있습니다.</p>
+        <p>콘텐츠산업진흥법에 의한 콘텐츠 보호 안내 <a href="#">자세히 보기</a></p>
       </div>
     </div>
+  </div>
 
 
 
@@ -483,98 +533,139 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      /*작은화면 메뉴 토글버튼*/
-      const toggleBtn = document.querySelector(".togglebtn");
-      const gnb = document.querySelector(".s-gnb");
-      const closeBtn = document.querySelector(".close-btn")
-      const body = document.querySelector("body")
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    /*작은화면 메뉴 토글버튼*/
+    const toggleBtn = document.querySelector(".togglebtn");
+    const gnb = document.querySelector(".s-gnb");
+    const closeBtn = document.querySelector(".close-btn")
+    const body = document.querySelector("body")
 
-      // console.log(gnb)
-      toggleBtn.addEventListener("click", () => {
-        gnb.style.right = 0
-        body.classList.add("dark-mode")
+    // console.log(gnb)
+    toggleBtn.addEventListener("click", () => {
+      gnb.style.right = 0
+      body.classList.add("dark-mode")
 
-      })
-      closeBtn.addEventListener("click", () => {
-        gnb.style.right = "-100%"
-        body.classList.remove("dark-mode")
-      })
+    })
+    closeBtn.addEventListener("click", () => {
+      gnb.style.right = "-100%"
+      body.classList.remove("dark-mode")
+    })
 
-      /*스와이퍼*/
-      const swiper = new Swiper('.swiper', {
-        loop: true,
-        slidesPerView: 5,
-        spaceBetween: 20,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+    /*스와이퍼*/
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 5,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
+      // 반응형 설정
+      breakpoints: {
+        // 화면 너비가 1200px 이상일 때
+        1200: {
+          slidesPerView: 5,
         },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+        // 화면 너비가 1024px 이상일 때
+        1024: {
+          slidesPerView: 4,
         },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
+        // 화면 너비가 768px 이상일 때
+        768: {
+          slidesPerView: 3.5,
+        },
+        // 화면 너비가 480px 이상일 때
+        480: {
+          slidesPerView: 1.5,
+        },
+        // 그보다 작을 때
+        0: {
+          slidesPerView: 1,
+        },
+      }
+    });
+
+    /*스와이퍼*/
+    const swiper1 = new Swiper('.swiper1', {
+      loop: true,
+      slidesPerView: 3.5,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
+      // 반응형 설정
+      breakpoints: {
+        // 화면 너비가 1200px 이상일 때
+        1200: {
+          slidesPerView: 3.5,
         },
 
-        // 반응형 설정
-        breakpoints: {
-          // 화면 너비가 1200px 이상일 때
-          1200: {
-            slidesPerView: 5,
-          },
-          // 화면 너비가 1024px 이상일 때
-          1024: {
-            slidesPerView: 4,
-          },
-          // 화면 너비가 768px 이상일 때
-          768: {
-            slidesPerView: 3.5,
-          },
-          // 화면 너비가 480px 이상일 때
-          480: {
-            slidesPerView: 1.5,
-          },
-          // 그보다 작을 때
-          0: {
-            slidesPerView: 1,
-          },
-        }
-      });
+        // 화면 너비가 768px 이상일 때
+        768: {
+          slidesPerView: 1.5,
+        },
+      }
+    });
 
-      /*footer-nav*/
-      // const navLi = document.querySelectorAll("#bottom-nav > .container > .nav > li")
-      // const sub = document.querySelector("#bottom-nav > .container > .nav > li > .sub")
+    /*footer-nav*/
+    // const navLi = document.querySelectorAll("#bottom-nav > .container > .nav > li")
+    // const sub = document.querySelector("#bottom-nav > .container > .nav > li > .sub")
 
-      // function mobilemenu() {
-      //   if (window.innerWidth <= 1200) {
-      //     navLi.forEach((li) => {
-      //       li.addEventListener("click", function (e) {
-      //         e.preventDefault();
+    // function mobilemenu() {
+    //   if (window.innerWidth <= 1200) {
+    //     navLi.forEach((li) => {
+    //       li.addEventListener("click", function (e) {
+    //         e.preventDefault();
 
-      //         if (sub) {
-      //           const isVisible = sub.style.display === "flex";
+    //         if (sub) {
+    //           const isVisible = sub.style.display === "flex";
 
-      //           // 모든 .sub 닫기
-      //           document.querySelectorAll(".sub").forEach((el) => el.style.display = "none");
+    //           // 모든 .sub 닫기
+    //           document.querySelectorAll(".sub").forEach((el) => el.style.display = "none");
 
-      //           // 현재 클릭한 요소만 토글
-      //           sub.style.display = isVisible ? "none" : "flex";
-      //         }
-      //       })
-      //     })
-      //   } else {
-      //     document.querySelectorAll(".sub").forEach((sub) => {
-      //       sub.style.display = "flex"
-      //     })
-      //   }
-      // }
-      // mobilemenu();
+    //           // 현재 클릭한 요소만 토글
+    //           sub.style.display = isVisible ? "none" : "flex";
+    //         }
+    //       })
+    //     })
+    //   } else {
+    //     document.querySelectorAll(".sub").forEach((sub) => {
+    //       sub.style.display = "flex"
+    //     })
+    //   }
+    // }
+    // mobilemenu();
 
-    </script>
+    // AOS 초기화
+    AOS.init({
+      duration: 1200,  // 애니메이션 지속 시간 (ms)
+      once: true       // 한 번만 애니메이션 실행 (스크롤 시마다 반복 안함)
+    });
+
+
+  </script>
 </body>
 
 </html>

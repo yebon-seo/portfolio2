@@ -351,7 +351,8 @@ main > .container > img{
 }
 
 /*카드 이미지*/
-#running > .container > article {
+#running > .container > .noneslide {
+  display: none; /*이거 적용 안되는거*/
   width: 100%;
   overflow-x: hidden;
   padding-bottom: 10px;
@@ -1025,7 +1026,15 @@ figure > video {
   #running > .container > .btn {
     display: none;
   }
-  .card-wrap {
+  #running > .container > .noneslide {
+    display: block !important;
+    margin-top: 60px;
+  }
+  #running > .container > .swiper1 {
+    display: none;
+  }
+
+  /*.card-wrap {
     max-width: 1200px;
     width: 100%;
     flex-direction: row;
@@ -1034,16 +1043,16 @@ figure > video {
   }
   .card-wrap > .card {
     width: 50%;
-    padding: 0 0.8333%; /*양쪽으로 주려고*/
+    padding: 0 0.8333%; 양쪽으로 주려고
     margin-top: 50px;
   }
   .card-wrap > .card > img {
     width: 100%;
   }
-  /*마지막 카드 사라지기*/
+  /*마지막 카드 사라지기
   .card-wrap > .none {
     display: none;
-  }
+  }*/
 
   /*나이키 멤버십*/
   #membership > .container > .img-wrap {
@@ -1069,6 +1078,18 @@ figure > video {
     width: 100%;
     height: 70px;
     border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between; /* 자식 요소들을 양 끝으로 배치 */
+    align-items: center; /* 세로 정렬을 중앙으로 맞추기 */
+
+  }
+  #bottom-nav > .container > .nav > li::after {
+    content: "\25BE";
+    display: flex;
+    color: #111;
+    font-size: 25px;
+
+  }
   }
   #bottom-nav > .container > .nav > li > a {
     line-height: 70px;
@@ -1077,9 +1098,13 @@ figure > video {
     color: #111;
     margin-bottom: 0;
   }
-  #bottom-nav > .container > .nav > li > .sub {
+   /* 하위 메뉴 숨기기 */
+   #bottom-nav > .container > .nav > li > .sub {
     display: none;
+    
   }
+
+  
 
   /*copyright*/
   #bottom-nav > .container > .copyright > ul {
@@ -1095,10 +1120,11 @@ figure > video {
     text-align: left;
     line-height: 1.5;
   }
+  
 
 
 
-}
+
 
 /* 화면 크기가 995px 이하일 때 (모바일 화면) */
 @media (max-width: 995px) {

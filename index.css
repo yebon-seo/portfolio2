@@ -352,39 +352,21 @@ main > .container > img{
 
 /*카드 이미지*/
 #running > .container > .noneslide {
-  display: none; /*이거 적용 안되는거*/
+  display: none; 
   width: 100%;
-  overflow-x: hidden;
   padding-bottom: 10px;
 }
 .card-wrap {
-  width: 2300px;
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-/*스크롤바 디자인*/
-/* 스크롤바 디자인 기본값 (숨김 상태) */
-#running > .container > article::-webkit-scrollbar {
-  height: 10px; /* 수평 스크롤바의 높이 */
-}
-
-#running > .container > article::-webkit-scrollbar-thumb {
-  background: #ccc;  /* 기본적으로 스크롤바 thumb를 숨깁니다 */
-  border-radius: 10px;
-}
-
-#running > .container > article::-webkit-scrollbar-track {
-  background-color: transparent;  /* 스크롤바 트랙은 투명하게 설정 */
-  border-radius: 10px;
-}
-
-
 .card-wrap > .card {
+  width: calc(50% - 10px);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: space-between;
-  width: 19.17%;
-  padding-right: 0.83%;
+  /* padding: 0 20px; */
 }
 .card-wrap > .card > img{
   width: 100%;
@@ -414,6 +396,54 @@ main > .container > img{
   cursor: pointer;
 }
 
+/*swiper1*/
+.swiper1 {
+  display: flex;
+}
+.swiper1 > .swiper-wrapper {
+  display: flex;
+  width: 100%;
+  /* gap: 20px; */
+}
+.swiper1 > .swiper-wrapper > .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  min-height: 600px;
+  height: auto;
+}
+.swiper1 > .swiper-wrapper > .swiper-slide > .txt {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.swiper1 > .swiper-wrapper > .swiper-slide > .txt > img {
+  display: block;
+}
+.swiper1 > .swiper-wrapper > .swiper-slide > .txt > h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 20px;
+}
+.swiper1 > .swiper-wrapper > .swiper-slide > .txt > p {
+  /* flex-grow: 1;/ */
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 20px;
+}
+.swiper-slide > .txt > button {
+  margin-top: auto; /* 아래 고정 핵심! */
+  background-color: #111;
+  color: #f1f1f1;
+  width: 120px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
 /*==========배너 동영상==========*/
 figure {
   width: 100%;
@@ -591,10 +621,11 @@ figure > video {
 }
 /*버튼*/
 #trending-now > div > .btn {
-  display: flex;
+  display: none;
   justify-content: flex-end;
   gap: 35px;
   margin-bottom: 10px;
+
 }
 #trending-now > div > .btn > a {
   border-radius: 50%;
@@ -607,6 +638,7 @@ figure > video {
 #trending-now > div > .btn > a > i {
   line-height: 50px;
   color: #111;
+  display: block;
 }
 
 #trending-now > div > .btn > a:hover {
@@ -615,7 +647,7 @@ figure > video {
 
 /*더보기 버튼*/
 #trending-now > div > .morebtn {
-  display: none;
+  display: block;
 }
 #trending-now > div > .morebtn > a {
   color: #111;
@@ -759,7 +791,7 @@ figure > video {
 }
 /*버튼*/
 #membership > .title > .btn {
-  display: flex;
+  display: none;
   justify-content: space-between;
   gap: 35px;
 }
@@ -782,7 +814,7 @@ figure > video {
 }
 /*더보기 버튼*/
 #membership > .title > .morebtn {
-  display: none;
+  display: block;
 }
 #membership > .title > .morebtn > a {
   color: #111;
@@ -888,6 +920,8 @@ figure > video {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
+  justify-content: center;
+  /* width: 100%; */
 }
 /* #bottom-nav > .container > .nav > li:hover {
   background-color: #f1f1f1;
@@ -899,6 +933,7 @@ figure > video {
 }
 #bottom-nav > .container > .nav > li > .sub > li {
   width: 100%;
+  text-align: center;
 }
 #bottom-nav > .container > .nav > li > .sub > li > a {
   font-size: 14px;
@@ -1027,21 +1062,17 @@ figure > video {
     display: none;
   }
   #running > .container > .noneslide {
-    display: block !important;
+    display: flex;
+    /* flex-wrap: wrap; */
     margin-top: 60px;
   }
   #running > .container > .swiper1 {
     display: none;
   }
-
-  /*.card-wrap {
-    max-width: 1200px;
+  /* .card-wrap {
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-  }
-  .card-wrap > .card {
+  } */
+  /* .card-wrap > .card {
     width: 50%;
     padding: 0 0.8333%; 양쪽으로 주려고
     margin-top: 50px;
@@ -1076,20 +1107,17 @@ figure > video {
   }
   #bottom-nav > .container > .nav > li {
     width: 100%;
-    height: 70px;
     border-bottom: 1px solid #eee;
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /* 자식 요소들을 양 끝으로 배치 */
-    align-items: center; /* 세로 정렬을 중앙으로 맞추기 */
-
   }
-  #bottom-nav > .container > .nav > li::after {
+  #bottom-nav > .container > .nav > li > a::after {
     content: "\25BE";
-    display: flex;
+    display: block;
     color: #111;
     font-size: 25px;
-
-  }
+    
   }
   #bottom-nav > .container > .nav > li > a {
     line-height: 70px;
@@ -1097,14 +1125,26 @@ figure > video {
     font-weight: 600;
     color: #111;
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
-   /* 하위 메뉴 숨기기 */
-   #bottom-nav > .container > .nav > li > .sub {
-    display: none;
-    
+  /* 하위 메뉴 숨기기 */
+  #bottom-nav > .container > .nav > li > .sub {
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+    display: flex;
+    gap:0;
+    transition:max-height 0.3s;
+  }
+  #bottom-nav > .container > .nav > li > .sub > li{
+    text-align: left;
+    padding-bottom:10px;
   }
 
-  
 
   /*copyright*/
   #bottom-nav > .container > .copyright > ul {
@@ -1120,6 +1160,7 @@ figure > video {
     text-align: left;
     line-height: 1.5;
   }
+}
   
 
 
@@ -1178,7 +1219,7 @@ figure > video {
   #new-item > .container > .txt > h2 {
     font-size: 40px;
   }
-  .card-wrap {
+  /* .card-wrap {
     max-width: 995px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1191,11 +1232,11 @@ figure > video {
   }
   .card-wrap > .card > img {
     width: 100%;
-  }
+  } */
 
   /*==========After Dark Tour==========*/
   #running {
-    margin-top: 80px;
+    margin-top: 60px;
   }
   /*배너동영상*/
   figure {
@@ -1312,33 +1353,28 @@ figure > video {
   .w995px-icons {
     display: block;
   }
-  #running > .container > div {
+  /* #running > .container > div {
     flex-wrap: wrap;
   }
   #running > .container > div > .w1200px-txt > p {
     margin-top: 10px;
+  } */
+   
+  #running > .container > .noneslide {
+    display: none;
   }
-  .card-wrap {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: auto;
+  #running > .container > .swiper1 {
+    display: block;
+    margin-top: 40px;
   }
-  .card-wrap > .card {
-    width: calc(100% / 1.5); /* 1.5개씩 배치되도록 계산 */
-    margin-top: 50px;
-    padding: 0 1.666%;
-    flex-shrink: 0; /* 카드가 축소되지 않도록 설정 */
-  }
-  .card-wrap > .card > img {
-    width: 100%;
+  .swiper1 > .swiper-wrapper > .swiper-slide {
+    min-height: auto;
   }
 
   /*카드 이미지*/
-  #running > .container > article{
+  /* #running > .container > article{
     overflow-x: auto;
-  }
+  } */
   /*배너동영상*/
   figure > #txt > .top0 > p {
     font-size: 30px;

@@ -191,48 +191,48 @@
         </div>
       </article>
 
-      <article class="swiper1" data-aos="fade-up" >
-        <div class="swiper-wrapper card-wrap">
-          <div class="swiper-slide card">
+      <article class="swiper1" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img src="images/running1.png" alt="러닝">
-            <div>
+            <div class="txt">
               <h2>AFTER DARK TOUR 트레이닝</h2>
               <p>나이키와 함께 레이스를 준비해 보세요.
                 트레이닝 참여 멤버를 위한 서울 레이스 추가 참가권부터 LA 레이스 참가 기회까지...</p>
+              <button type="button">자세히보기</button>
             </div>
-            <button type="button">자세히보기</button>
           </div>
-          <div class="swiper-slide card">
+          <div class="swiper-slide">
             <img src="images/running2.png" alt="러닝">
-            <div>
+            <div class="txt">
               <h2>함께 달리는 10주 : 4주차 미션</h2>
               <p>NRC 나이트 러닝 인증샷</p>
+              <button type="button">자세히보기</button>
             </div>
-            <button type="button">자세히보기</button>
           </div>
-          <div class="swiper-slide card">
+          <div class="swiper-slide">
             <img src="images/running3.png" alt="러닝">
-            <div>
+            <div class="txt">
               <h2>함께 달리는 10주 : 3주차 미션</h2>
               <p>페이스를 높이는 팁 퀴즈</p>
+              <button type="button">자세히보기</button>
             </div>
-            <button type="button">자세히보기</button>
           </div>
-          <div class="swiper-slide card">
+          <div class="swiper-slide">
             <img src="images/running4.png" alt="러닝">
-            <div>
+            <div class="txt">
               <h2>함께 달리는 10주 : 2주차 미션</h2>
               <p>러너를 위한 NTC 워크아웃 투표</p>
+              <button type="button">자세히보기</button>
             </div>
-            <button type="button">자세히보기</button>
           </div>
-          <div class="swiper-slide card">
+          <div class="swiper-slide">
             <img src="images/running5.png" alt="러닝">
-            <div>
+            <div class="txt">
               <h2>함께 달리는 10주 : 1주차 미션</h2>
               <p>레이스 목표 설정</p>
+              <button type="button">자세히보기</button>
             </div>
-            <button type="button">자세히보기</button>
           </div>
         </div>
       </article>
@@ -273,7 +273,7 @@
         <p>QR 스캔하여 입장</p>
       </a>
     </div>
-    <div class="pic" data-aos="fade-up" >
+    <div class="pic" data-aos="fade-up">
       <div>
         <img src="images/Dn8.png" alt="신발">
         <div class="txt">
@@ -319,7 +319,7 @@
         <a href="#">더보기 &gt;</a>
       </div>
     </div>
-    <div class="container"  data-aos="fade-up" >
+    <div class="container" data-aos="fade-up">
       <div class="img-wrap">
         <div class="img-box">
           <img src="images/card-img1.png" alt="트렌딩">
@@ -409,7 +409,7 @@
         <a href="#">멤버 가입하기 &gt;</a>
       </div>
     </div>
-    <div class="container" data-aos="fade-up" >
+    <div class="container" data-aos="fade-up">
 
       <div class="img-wrap">
         <div class="img-box">
@@ -607,8 +607,8 @@
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.rbtn',
+        prevEl: '.lbtn',
       },
       autoplay: {
         delay: 3000,
@@ -622,41 +622,36 @@
           slidesPerView: 3.5,
         },
 
-        // 화면 너비가 768px 이상일 때
-        768: {
+        // 화면 너비가 370px 이상일 때
+        370: {
           slidesPerView: 1.5,
         },
       }
     });
 
+
+
+
     /*footer-nav*/
-    // const navLi = document.querySelectorAll("#bottom-nav > .container > .nav > li")
-    // const sub = document.querySelector("#bottom-nav > .container > .nav > li > .sub")
+    const navLi = document.querySelectorAll("#bottom-nav > .container > .nav > li")
 
-    // function mobilemenu() {
-    //   if (window.innerWidth <= 1200) {
-    //     navLi.forEach((li) => {
-    //       li.addEventListener("click", function (e) {
-    //         e.preventDefault();
+    navLi.forEach(li => {
+      li.addEventListener("click", (e) => {
+        e.preventDefault();
 
-    //         if (sub) {
-    //           const isVisible = sub.style.display === "flex";
+        navLi.forEach(el => {
+          el.querySelector(".sub").style.maxHeight = "0"
+        })
+        const sub = li.querySelector(".sub");
+        const currentHeight = getComputedStyle(sub).maxHeight;
 
-    //           // 모든 .sub 닫기
-    //           document.querySelectorAll(".sub").forEach((el) => el.style.display = "none");
-
-    //           // 현재 클릭한 요소만 토글
-    //           sub.style.display = isVisible ? "none" : "flex";
-    //         }
-    //       })
-    //     })
-    //   } else {
-    //     document.querySelectorAll(".sub").forEach((sub) => {
-    //       sub.style.display = "flex"
-    //     })
-    //   }
-    // }
-    // mobilemenu();
+        if (currentHeight === "0px") {
+          sub.style.maxHeight = sub.scrollHeight + "px";
+        } else {
+          sub.style.maxHeight = "0";
+        }
+      })
+    })
 
     // AOS 초기화
     AOS.init({
